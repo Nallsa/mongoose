@@ -1,8 +1,8 @@
-const express = require('expess')
+const express = require('express')
 const mongoose = require('mongoose')
 const app = express()
 
-app.use(require('./router/mongoose.router'))
+app.use(require('./router/Student.router'))
 
 mongoose
   .connect(
@@ -12,9 +12,11 @@ mongoose
       useUnifiedTopology: true,
     }
   )
-  .then(() => console.log('Успешно соединились с сервером MongoDB'))
-  .catch(() => console.log('Ошибка при соединении с сервером MongoDB'))
+  .then(() => {
+    app.listen(4000, () => {
+      console.log(`http://localhost:${4000}`)
+    })
 
-app.listen(4000, () => {
-  console.log(`http://localhost:${4000}`)
-})
+    console.log('Успешно соединились с сервером MongoDB')
+  })
+  .catch(() => console.log('Ошибка при соединении с сервером MongoDB'))
