@@ -2,6 +2,7 @@ const express = require('express')
 const mongoose = require('mongoose')
 const app = express()
 
+app.use(express.json())
 app.use(require('./router/Student.router'))
 
 mongoose
@@ -13,8 +14,8 @@ mongoose
     }
   )
   .then(() => {
-    app.listen(4000, () => {
-      console.log(`http://localhost:${4000}`)
+    app.listen(3000, () => {
+      console.log(`http://localhost:${3000}`)
     })
 
     console.log('Успешно соединились с сервером MongoDB')

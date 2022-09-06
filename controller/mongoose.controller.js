@@ -3,9 +3,9 @@ module.exports.studentController = {
   getStudent: (req, res) => {},
   postStudent: (req, res) => {
     Student.create({
-      name: 'имя студента',
-      phone: 'номер телефона',
-      age: 19,
+      name: req.body.name,
+      phone: req.body.phone,
+      age: req.body.age,
     }).then(() => {
       res.json('Студент добавлен')
     })
