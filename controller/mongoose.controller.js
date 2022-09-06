@@ -1,6 +1,6 @@
-module.exports.mongooseController = {
-  getMongoose: (req, res) => {},
-  postMongoose: (req, res) => {},
-  deleteMongoose: (req, res) => {},
-  patchMongoose: (req, res) => {},
+module.exports.studentController = {
+  getStudent: (req, res) => {},
+  postStudent: (req, res) => {},
+  deleteStudent: (req, res) => {},
+  patchStudent: (req, res) => {},
 }
