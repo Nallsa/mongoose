@@ -3,7 +3,7 @@ const mongoose = require('mongoose')
 const app = express()
 
 app.use(express.json())
-app.use(require('./router/Student.router'))
+app.use(require('./router/student.router'))
 
 mongoose
   .connect(

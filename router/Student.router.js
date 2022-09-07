@@ -1,6 +1,6 @@
 const { Router } = require('express')
 
-const { studentController } = require('../controller/mongoose.controller')
+const { studentController } = require('../controller/student.controller')
 
 const router = Router()
 
